@@ -18,6 +18,7 @@ type DomainCheckResult struct {
 func CheckDomain(email string) (string, error) {
 	domain := extractDomain(email)
 	var result DomainCheckResult
+	result.Domain = domain
 
 	// Check for MX records
 	mxRecords, err := net.LookupMX(domain)
