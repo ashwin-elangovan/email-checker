@@ -15,7 +15,7 @@ type DomainCheckResult struct {
 	DMARCRecord  string `json:"dmarc_record,omitempty"`
 }
 
-func checkdomain(email string) (string, error) {
+func CheckDomain(email string) (string, error) {
 	domain := extractDomain(email)
 	var result DomainCheckResult
 
