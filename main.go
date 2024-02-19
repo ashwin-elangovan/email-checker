@@ -1,4 +1,4 @@
-package EmailChecker
+package emailchecker
 
 import (
 	"encoding/json"
@@ -15,7 +15,7 @@ type DomainCheckResult struct {
 	DMARCRecord  string `json:"dmarc_record,omitempty"`
 }
 
-func checkDomain(email string) (string, error) {
+func checkdomain(email string) (string, error) {
 	domain := extractDomain(email)
 	var result DomainCheckResult
 
